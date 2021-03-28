@@ -185,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 50.0,
           child: ElevatedButton(
             onPressed: onAyarlarClick,
-            child: const Text('Ayarlar', style: TextStyle(fontSize: 20)),
+            child: const Text('Settings', style: TextStyle(fontSize: 20)),
           ),
         ),
         Padding(
