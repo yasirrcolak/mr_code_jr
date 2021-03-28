@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (ekran == 0) {
       EkrandakiWidget = <Widget>[
         //Text('Hoşgeldiniz.'),
-        Text('Mahmut'),
+        Text('Mahmut2'),
 
         /*
         Row(
