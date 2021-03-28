@@ -18,6 +18,7 @@ class _WelcomePage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         centerTitle: true,
         title: Text("Mr.Code Jr",

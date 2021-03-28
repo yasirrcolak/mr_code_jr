@@ -12,6 +12,7 @@ class _HighScorePage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: Text("Yüksek Skorlar"),
       ),
