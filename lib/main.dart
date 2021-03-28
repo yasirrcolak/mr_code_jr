@@ -24,7 +24,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int ekran = 0;
   String a = "Görev 1:                        ";
 
@@ -34,19 +33,19 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void onOynaClick(){
+  void onOynaClick() {
     setState(() {
       ekran = 1;
     });
   }
 
-  void onAyarlarClick(){
+  void onAyarlarClick() {
     setState(() {
       ekran = 3;
     });
   }
 
-  void onHighScorePageClick(){
+  void onHighScorePageClick() {
     setState(() {
       ekran = 2;
     });
@@ -58,41 +57,32 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void onCikisClick(){
+  void onCikisClick() {
     exit(0);
   }
 
-  void onLevel1LoadClick(){
-
+  void onLevel1LoadClick() {
 //    level1();
-
-
 
     setState(() {
       ekran = 11;
     });
-
   }
 
-
-  void onYukari(){
+  void onYukari() {
     setState(() {
       a = "Yukarı";
     });
-
   }
-
 
   @override
   Widget build(BuildContext context) {
-
     var EkrandakiWidget;
 
-    if(ekran==0){
+    if (ekran == 0) {
       EkrandakiWidget = <Widget>[
         //Text('Hoşgeldiniz.'),
-        Text('yeni text'),
-
+        Text('Mahmut'),
 
         /*
         Row(
@@ -168,11 +158,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         */
 
-
         SizedBox(
           width: 170.0,
           height: 50.0,
-          child:    ElevatedButton(
+          child: ElevatedButton(
             onPressed: onOynaClick,
             child: const Text('Oyna', style: TextStyle(fontSize: 20)),
           ),
@@ -216,24 +205,21 @@ class _MyHomePageState extends State<MyHomePage> {
         SizedBox(
           width: 170.0,
           height: 50.0,
-          child:         ElevatedButton(
+          child: ElevatedButton(
             onPressed: onCikisClick,
             child: const Text('Çıkış', style: TextStyle(fontSize: 20)),
           ),
         ),
-
-
-
       ];
-    }
-    else if(ekran == 1){
+    } else if (ekran == 1) {
       EkrandakiWidget = <Widget>[
-        Text('Leveller', style: TextStyle(fontSize: 35),),
-
+        Text(
+          'Leveller',
+          style: TextStyle(fontSize: 35),
+        ),
         Padding(
           padding: const EdgeInsets.all(15),
         ),
-
         Row(
           children: <Widget>[
             Padding(
@@ -260,13 +246,12 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton(
                 child: const Text('Level 3', style: TextStyle(fontSize: 20)),
               ),
-             ),
+            ),
             Padding(
               padding: const EdgeInsets.all(15),
             ),
-           ],
+          ],
         ),
-
         Row(
           children: <Widget>[
             Padding(
@@ -298,7 +283,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-
         Row(
           children: <Widget>[
             Padding(
@@ -330,143 +314,140 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-
-        Padding(
-            padding: const EdgeInsets.all(15),
-        ),
-
-        ElevatedButton(
-          onPressed: onHomeClick,
-          child: const Text('Geri', style: TextStyle(fontSize: 20)),
-        ),
-      ];
-    }
-    else if(ekran == 2){
-      EkrandakiWidget = <Widget>[
-        Text('Yüksek skorlar', style: TextStyle(fontSize: 35),),
-
         Padding(
           padding: const EdgeInsets.all(15),
         ),
-
         ElevatedButton(
           onPressed: onHomeClick,
           child: const Text('Geri', style: TextStyle(fontSize: 20)),
         ),
       ];
-    }
-    else if(ekran == 3){
+    } else if (ekran == 2) {
       EkrandakiWidget = <Widget>[
-        Text('Ayarlar', style: TextStyle(fontSize: 35),),
+        Text(
+          'Yüksek skorlar',
+          style: TextStyle(fontSize: 35),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15),
+        ),
+        ElevatedButton(
+          onPressed: onHomeClick,
+          child: const Text('Geri', style: TextStyle(fontSize: 20)),
+        ),
+      ];
+    } else if (ekran == 3) {
+      EkrandakiWidget = <Widget>[
+        Text(
+          'Ayarlar',
+          style: TextStyle(fontSize: 35),
+        ),
         Text("ses"),
-
         ElevatedButton(
           onPressed: onHomeClick,
           child: const Text('Geri', style: TextStyle(fontSize: 20)),
         ),
       ];
-    }
-    else if(ekran == 4){
+    } else if (ekran == 4) {
       EkrandakiWidget = <Widget>[
-        Text('Hakkında', style: TextStyle(fontSize: 35),),
-
+        Text(
+          'Hakkında',
+          style: TextStyle(fontSize: 35),
+        ),
         Padding(
             padding: const EdgeInsets.all(15),
-            child: Text("Bu uygulama;\nÖmer Faruk KUTLU \nMuhammet Yasir ÇOLAK\ntarafından tasarlanmıştır."
-            )
-        ),
+            child: Text(
+                "Bu uygulama;\nÖmer Faruk KUTLU \nMuhammet Yasir ÇOLAK\ntarafından tasarlanmıştır.")),
         ElevatedButton(
           onPressed: onHomeClick,
           child: const Text('Geri', style: TextStyle(fontSize: 20)),
         ),
       ];
-    }
-
-
-
-
-    else if(ekran == 11){
+    } else if (ekran == 11) {
       EkrandakiWidget = <Widget>[
         Row(
           children: <Widget>[
             Expanded(
-              child: Column(
-                children: <Widget>[
-                  Text("Sabit Görevler", style: TextStyle(fontSize: 20),),
-                  Padding(
-                      padding: const EdgeInsets.all(10),
+                child: Column(
+              children: <Widget>[
+                Text(
+                  "Sabit Görevler",
+                  style: TextStyle(fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                SizedBox(
+                  width: 100.0,
+                  height: 50.0,
+                  child: ElevatedButton(
+                    onPressed: onYukari,
+                    child: const Text('Yukarı', style: TextStyle(fontSize: 20)),
                   ),
-
-                 SizedBox(
-                    width: 100.0,
-                    height: 50.0,
-                    child:    ElevatedButton(
-                      onPressed: onYukari,
-                      child: const Text('Yukarı', style: TextStyle(fontSize: 20)),
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 100.0,
+                  height: 50.0,
+                  child: ElevatedButton(
+                    child: const Text('Aşağı', style: TextStyle(fontSize: 20)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(5),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 100.0,
+                  height: 50.0,
+                  child: ElevatedButton(
+                    child: const Text('Sağa', style: TextStyle(fontSize: 20)),
                   ),
-                 SizedBox(
-                    width: 100.0,
-                    height: 50.0,
-                    child:   ElevatedButton(
-                      child: const Text('Aşağı', style: TextStyle(fontSize: 20)),
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5),
+                ),
+                SizedBox(
+                  width: 100.0,
+                  height: 50.0,
+                  child: ElevatedButton(
+                    child: const Text('Sola', style: TextStyle(fontSize: 20)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                  ),
-                  SizedBox(
-                    width: 100.0,
-                    height: 50.0,
-                    child:  ElevatedButton(
-                      child: const Text('Sağa', style: TextStyle(fontSize: 20)),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                  ),
-                  SizedBox(
-                    width: 100.0,
-                    height: 50.0,
-                    child: ElevatedButton(
-                      child: const Text('Sola', style: TextStyle(fontSize: 20)),
-                    ),
-                  ),
-                ],
-              )
-            ),
+                ),
+              ],
+            )),
             Expanded(
-              child: Column(
-                children: <Widget>[
-                  Text("Kullanıcının Seçtikleri", style: TextStyle(fontSize: 20)),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  Text(" $a ", style: TextStyle(fontSize: 20)),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  Text("Görev 2:                        ", style: TextStyle(fontSize: 20)),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  Text("Görev 3:                        ", style: TextStyle(fontSize: 20)),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  Text("Görev 4:                        ", style: TextStyle(fontSize: 20)),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                  ),
-                  ElevatedButton(
-                    child: const Text('Temizle', style: TextStyle(fontSize: 20)),
-                  ),
-                ],
-              )
-            ),
+                child: Column(
+              children: <Widget>[
+                Text("Kullanıcının Seçtikleri", style: TextStyle(fontSize: 20)),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text(" $a ", style: TextStyle(fontSize: 20)),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text("Görev 2:                        ",
+                    style: TextStyle(fontSize: 20)),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text("Görev 3:                        ",
+                    style: TextStyle(fontSize: 20)),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                Text("Görev 4:                        ",
+                    style: TextStyle(fontSize: 20)),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                ),
+                ElevatedButton(
+                  child: const Text('Temizle', style: TextStyle(fontSize: 20)),
+                ),
+              ],
+            )),
             Expanded(
               child: FittedBox(
                 fit: BoxFit.contain, // otherwise the logo will be tiny
@@ -475,25 +456,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-
-
         ElevatedButton(
           onPressed: onOynaClick,
           child: const Text('Geri', style: TextStyle(fontSize: 20)),
         ),
-
       ];
     }
-
 
     return Scaffold(
       appBar: AppBar(title: Text('Mr. Code Jr')),
       body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: EkrandakiWidget,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: EkrandakiWidget,
         ),
+      ),
     );
   }
 }
