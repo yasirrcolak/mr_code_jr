@@ -166,9 +166,13 @@ class _Level1 extends State {
                               height: 50,
                               child: ElevatedButton(
                                   onPressed: () => Level1(),
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Colors.white)),
                                   child: Text(
                                     "Yukarı",
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 20, color: Colors.black),
                                   )),
                             ),
                             SizedBox(
@@ -225,7 +229,7 @@ class _Level1 extends State {
                             ),
                             ListTile(
                               title: Text("mahmut"),
-                              subtitle: Text("He ha"),
+                              subtitle: Text("mahmutttt"),
                               trailing: IconButton(
                                 icon: Icon(Icons.remove_shopping_cart),
                                 onPressed: () {
@@ -254,15 +258,17 @@ class _Level1 extends State {
                                   fontWeight: FontWeight.bold,
                                 )),
                             FittedBox(
-                              fit: BoxFit
-                                  .contain, // otherwise the logo will be tiny
+                              fit: BoxFit.contain, // otherwise the logo will be tiny
                               child: const FlutterLogo(),
                             ),
                           ],
                         ),
                       ),
-                    ]),
-              ])),
+                    ]
+                ),
+              ]
+          )
+      ),
     );
   }
 }
