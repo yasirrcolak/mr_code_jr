@@ -17,17 +17,6 @@ class _level1 extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-/*
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("LEVEL 1",
-            style: TextStyle(
-              fontSize: 31,
-              fontWeight: FontWeight.bold,
-            )
-        ),
-      ),
-*/
       body: Container(
         color: Colors.black38,
         child: Column(
@@ -153,7 +142,6 @@ class _level1 extends State {
                         color: Colors.pinkAccent,
                         border: Border.all(
                           width: 0.0,
-
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       ),
@@ -184,7 +172,8 @@ class _level1 extends State {
                               style: TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold,
-                              )),
+                              )
+                          ),
                         ],
                       ),
                     ),
@@ -205,6 +194,10 @@ class _level1 extends State {
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold,
                               )
+                            ),
+                          FittedBox(
+                             fit: BoxFit.contain, // otherwise the logo will be tiny
+                           child: const FlutterLogo(),
                           ),
                         ],
                       ),
