@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mr_code_jr/levels/level1.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
 class LevelsPage extends StatefulWidget {
@@ -25,7 +26,10 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
+                    onPressed:  () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => level1()),
+                    ),
                     child: const Text('1', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -33,7 +37,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('6', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -41,7 +44,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('11', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -54,7 +56,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('2', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -62,7 +63,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('7', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -70,7 +70,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('12', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -83,7 +82,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('3', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -91,7 +89,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('8', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -99,7 +96,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('13', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -112,7 +108,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('4', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -120,7 +115,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('9', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -128,7 +122,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('14', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -141,7 +134,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('5', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -149,7 +141,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('10', style: TextStyle(fontSize: 20)),
                   ),
                 ),
@@ -157,7 +148,6 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed: () => WelcomePage(),
                     child: const Text('15', style: TextStyle(fontSize: 20)),
                   ),
                 ),
