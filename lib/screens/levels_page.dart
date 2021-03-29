@@ -26,9 +26,9 @@ class _LevelsPage extends State {
                   width: 100.0,
                   height: 70.0,
                   child: ElevatedButton(
-                    onPressed:  () => Navigator.push(
+                    onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => level1()),
+                      MaterialPageRoute(builder: (context) => Level1()),
                     ),
                     child: const Text('1', style: TextStyle(fontSize: 20)),
                   ),
