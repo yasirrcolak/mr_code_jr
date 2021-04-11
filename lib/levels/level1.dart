@@ -256,10 +256,7 @@ class _Level1 extends State {
                                 style: TextStyle(
                                   fontSize: 30,
                                   fontWeight: FontWeight.bold,
-                                )),
-                            FittedBox(
-                              fit: BoxFit.contain, // otherwise the logo will be tiny
-                              child: const FlutterLogo(),
+                                )
                             ),
                           ],
                         ),

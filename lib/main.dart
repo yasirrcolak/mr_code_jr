@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:mr_code_jr/levels/level1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mr_code_jr/screens/login_page.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomePage(),
+      home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
