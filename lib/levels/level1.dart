@@ -15,7 +15,7 @@ class _Level1 extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          color: Colors.black38,
+          color: Colors.white,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -147,7 +147,7 @@ class _Level1 extends State {
                         width: 200,
                         height: 300,
                         decoration: BoxDecoration(
-                          color: Colors.pinkAccent,
+                          color: Colors.yellowAccent,
                           border: Border.all(
                             width: 0.0,
                           ),
@@ -168,11 +168,12 @@ class _Level1 extends State {
                                   onPressed: () => Level1(),
                                   style: ButtonStyle(
                                       backgroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Colors.white)),
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
                                   child: Text(
                                     "Yukarı",
-                                    style: TextStyle(fontSize: 20, color: Colors.black),
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
                                   )),
                             ),
                             SizedBox(
@@ -180,9 +181,14 @@ class _Level1 extends State {
                               height: 50,
                               child: ElevatedButton(
                                   onPressed: () => Level1(),
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
                                   child: Text(
                                     "Aşağı",
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
                                   )),
                             ),
                             SizedBox(
@@ -190,9 +196,14 @@ class _Level1 extends State {
                               height: 50,
                               child: ElevatedButton(
                                   onPressed: () => Level1(),
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
                                   child: Text(
                                     "Sağa",
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
                                   )),
                             ),
                             SizedBox(
@@ -200,9 +211,14 @@ class _Level1 extends State {
                               height: 50,
                               child: ElevatedButton(
                                   onPressed: () => Level1(),
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white)),
                                   child: Text(
                                     "Sola",
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
                                   )),
                             ),
                           ],
@@ -241,31 +257,25 @@ class _Level1 extends State {
                         ),
                       ),
                       Container(
+                        color: Colors.white,
                         width: 200,
                         height: 300,
-                        decoration: BoxDecoration(
-                          color: Colors.greenAccent,
-                          border: Border.all(
-                            width: 0.0,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        ),
+                        // decoration: BoxDecoration(
+                        //   border: Border.all(
+                        //     width: 0.0,
+                        //   ),
+                        //   borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        // ),
+
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text("Oyun sahası",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                )
-                            ),
+                            Image.asset('assets/images/gamezone.png')
                           ],
                         ),
                       ),
-                    ]
-                ),
-              ]
-          )
-      ),
+                    ]),
+              ])),
     );
   }
 }
