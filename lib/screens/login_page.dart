@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,7 +19,6 @@ class _LoginPage extends State {
       //   title: Text("Login Page"),
       // ),
       body: Row(
-
           // color: Colors.greenAccent,
           // child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -51,7 +51,6 @@ class _LoginPage extends State {
                       TextField(
                         obscureText: true,
                         decoration: InputDecoration(
-                          filled: true,
                           border: OutlineInputBorder(),
                           labelText: "Parola",
                         ),
@@ -83,10 +82,13 @@ class _LoginPage extends State {
                           ),
                         ),
                       )
-                    ]),
+                    ]
+                ),
               ),
-            ))
-          ]),
+            )
+            )
+          ]
+      ),
     );
   }
 }

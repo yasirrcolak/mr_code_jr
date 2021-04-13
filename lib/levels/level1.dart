@@ -243,6 +243,48 @@ class _Level1 extends State {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            Container(
+                              width: 200,
+                              height: 250,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                  width: 0.0,
+                                ),
+                              ),
+                              child: ListView(
+                                shrinkWrap: true,
+                                children: <Widget>[
+                                  Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                      ],
+                                    ),
+                                ],
+                              ),
+                            ),
+
+                            /*
                             ListTile(
                               title: Text("mahmut"),
                               subtitle: Text("mahmutttt"),
@@ -253,6 +295,7 @@ class _Level1 extends State {
                                 },
                               ),
                             ),
+                            */
                           ],
                         ),
                       ),
@@ -274,8 +317,11 @@ class _Level1 extends State {
                           ],
                         ),
                       ),
-                    ]),
-              ])),
+                    ]
+                ),
+              ]
+          )
+      ),
     );
   }
 }
