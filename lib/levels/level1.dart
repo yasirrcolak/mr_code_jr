@@ -10,6 +10,9 @@ class Level1 extends StatefulWidget {
   }
 }
 
+bool loading = true;
+List<Widget> tasksList = [];
+
 class _Level1 extends State {
   @override
   Widget build(BuildContext context) {
@@ -63,7 +66,7 @@ class _Level1 extends State {
                                         Colors.white)),
                             child: Icon(
                               Icons.backspace,
-                              color: Colors.pink,
+                              color: Colors.redAccent,
                               size: 30.0,
                             ),
                           ),
@@ -101,10 +104,6 @@ class _Level1 extends State {
                         ),
                         child: Center(
                           child: ElevatedButton(
-                            onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => Level1()),
-                            ),
                             style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
@@ -181,13 +180,14 @@ class _Level1 extends State {
                               width: 110,
                               height: 50,
                               child: ElevatedButton(
-                                  onPressed: () => Level1(),
+                                  onPressed: () => {addToTask("Yukarı")},
                                   style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.white),
-                                    shadowColor:                                           MaterialStateProperty.all<Color>(
-                                        Colors.black),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
+                                    shadowColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.black),
                                   ),
                                   child: Text(
                                     "Yukarı",
@@ -199,13 +199,14 @@ class _Level1 extends State {
                               width: 110,
                               height: 50,
                               child: ElevatedButton(
-                                  onPressed: () => Level1(),
+                                  onPressed: () => {addToTask("Aşağı")},
                                   style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.white),
-                                      shadowColor:                                           MaterialStateProperty.all<Color>(
-                                          Colors.black),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
+                                    shadowColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.black),
                                   ),
                                   child: Text(
                                     "Aşağı",
@@ -217,13 +218,14 @@ class _Level1 extends State {
                               width: 110,
                               height: 50,
                               child: ElevatedButton(
-                                  onPressed: () => Level1(),
+                                  onPressed: () => {addToTask("Sağa")},
                                   style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.white),
-                                    shadowColor:                                           MaterialStateProperty.all<Color>(
-                                        Colors.black),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
+                                    shadowColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.black),
                                   ),
                                   child: Text(
                                     "Sağa",
@@ -235,20 +237,20 @@ class _Level1 extends State {
                               width: 110,
                               height: 50,
                               child: ElevatedButton(
-                                  onPressed: () => Level1(),
+                                  onPressed: () => {addToTask("Sola")},
                                   style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              Colors.white),
-                                    shadowColor:                                           MaterialStateProperty.all<Color>(
-                                        Colors.black),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
+                                    shadowColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.black),
                                   ),
-                                  child: Text("Sola",
+                                  child: Text(
+                                    "Sola",
                                     style: TextStyle(
-                                        fontSize: 20, color: Colors.black
-                                    ),
-                                  )
-                              ),
+                                        fontSize: 20, color: Colors.black),
+                                  )),
                             ),
                           ],
                         ),
@@ -290,83 +292,9 @@ class _Level1 extends State {
                                 ),
                               ),
                               child: ListView(
-                                shrinkWrap: true,
-                                children: <Widget>[
-                                  Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      children: <Widget>[
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                        ListTile(
-                                          title: Text("mahmut"),
-                                          trailing: IconButton(
-                                            icon: Icon(Icons.highlight_remove_sharp),
-                                            onPressed: () {
-                                              // delete task .
-                                            },
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                ],
-                              ),
+                                  shrinkWrap: true,
+                                  children: loading ? [] : tasksList),
                             ),
-
-                            /*
-                            ListTile(
-                              title: Text("mahmut"),
-                              subtitle: Text("mahmutttt"),
-                              trailing: IconButton(
-                                icon: Icon(Icons.remove_shopping_cart),
-                                onPressed: () {
-                                  Level1();
-                                },
-                              ),
-                            ),
-                            */
                           ],
                         ),
                       ),
@@ -374,13 +302,6 @@ class _Level1 extends State {
                         color: Colors.white,
                         width: 200,
                         height: 300,
-                        // decoration: BoxDecoration(
-                        //   border: Border.all(
-                        //     width: 0.0,
-                        //   ),
-                        //   borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        // ),
-
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -388,11 +309,30 @@ class _Level1 extends State {
                           ],
                         ),
                       ),
-                    ]
-                ),
-              ]
-          )
-      ),
+                    ]),
+              ])),
     );
   }
+
+  addToTask(String taskName) {
+    tasksList.add(new ListTile(
+      title: Text(taskName),
+      trailing: IconButton(
+        icon: Icon(Icons.highlight_remove_sharp),
+        onPressed: () {
+          // delete task .
+        },
+      ),
+    ));
+
+    setState(() {
+      loading = false;
+    });
+  }
+
+  // loadingTrue() {
+  //   // setState(() {
+  //   loading = true;
+  //   // });
+  // }
 }
