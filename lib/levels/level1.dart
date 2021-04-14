@@ -20,9 +20,17 @@ class _Level1 extends State {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Container(
-                  width: 650,
+                  width: 665,
                   height: 50,
                   decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 4,
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      )
+                    ],
                     color: Colors.blueAccent,
                     border: Border.all(
                       width: 0.0,
@@ -147,6 +155,14 @@ class _Level1 extends State {
                         width: 200,
                         height: 300,
                         decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 4,
+                              blurRadius: 10,
+                              offset: Offset(0, 3),
+                            )
+                          ],
                           color: Colors.yellowAccent,
                           border: Border.all(
                             width: 0.0,
@@ -169,7 +185,10 @@ class _Level1 extends State {
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
-                                              Colors.white)),
+                                              Colors.white),
+                                    shadowColor:                                           MaterialStateProperty.all<Color>(
+                                        Colors.black),
+                                  ),
                                   child: Text(
                                     "Yukarı",
                                     style: TextStyle(
@@ -184,7 +203,10 @@ class _Level1 extends State {
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
-                                              Colors.white)),
+                                              Colors.white),
+                                      shadowColor:                                           MaterialStateProperty.all<Color>(
+                                          Colors.black),
+                                  ),
                                   child: Text(
                                     "Aşağı",
                                     style: TextStyle(
@@ -199,7 +221,10 @@ class _Level1 extends State {
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
-                                              Colors.white)),
+                                              Colors.white),
+                                    shadowColor:                                           MaterialStateProperty.all<Color>(
+                                        Colors.black),
+                                  ),
                                   child: Text(
                                     "Sağa",
                                     style: TextStyle(
@@ -214,12 +239,16 @@ class _Level1 extends State {
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
-                                              Colors.white)),
-                                  child: Text(
-                                    "Sola",
+                                              Colors.white),
+                                    shadowColor:                                           MaterialStateProperty.all<Color>(
+                                        Colors.black),
+                                  ),
+                                  child: Text("Sola",
                                     style: TextStyle(
-                                        fontSize: 20, color: Colors.black),
-                                  )),
+                                        fontSize: 20, color: Colors.black
+                                    ),
+                                  )
+                              ),
                             ),
                           ],
                         ),
@@ -228,6 +257,14 @@ class _Level1 extends State {
                         width: 200,
                         height: 300,
                         decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 4,
+                              blurRadius: 10,
+                              offset: Offset(0, 3),
+                            )
+                          ],
                           color: Colors.orangeAccent,
                           border: Border.all(
                             width: 0.0,
@@ -258,26 +295,60 @@ class _Level1 extends State {
                                   Column(
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       children: <Widget>[
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
-                                        Text("adasdsa", style: TextStyle(fontSize: 20),),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
+                                        ListTile(
+                                          title: Text("mahmut"),
+                                          trailing: IconButton(
+                                            icon: Icon(Icons.highlight_remove_sharp),
+                                            onPressed: () {
+                                              // delete task .
+                                            },
+                                          ),
+                                        ),
                                       ],
                                     ),
                                 ],
