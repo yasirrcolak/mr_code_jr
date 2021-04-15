@@ -292,7 +292,7 @@ class _Level1 extends State {
                                 ),
                               ),
                               child: ListView(
-                                  shrinkWrap: true,
+                                  //shrinkWrap: true,
                                   children: loading ? [] : tasksList),
                             ),
                           ],
@@ -315,6 +315,11 @@ class _Level1 extends State {
   }
 
   addToTask(String taskName) {
+
+    setState(() {
+      loading = true;
+    });
+
     tasksList.add(new ListTile(
       title: Text(taskName),
       trailing: IconButton(
@@ -328,6 +333,7 @@ class _Level1 extends State {
     setState(() {
       loading = false;
     });
+
   }
 
   // loadingTrue() {
