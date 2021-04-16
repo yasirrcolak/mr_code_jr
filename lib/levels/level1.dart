@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/levels_page.dart';
-import 'package:mr_code_jr/screens/welcome_page.dart';
 
 class Level1 extends StatefulWidget {
   @override
@@ -10,7 +9,6 @@ class Level1 extends StatefulWidget {
   }
 }
 
-bool loading = true;
 List<Widget> tasksList = [];
 
 class _Level1 extends State {
@@ -22,6 +20,7 @@ class _Level1 extends State {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+                //#region APP BAR
                 Container(
                   width: 665,
                   height: 50,
@@ -147,9 +146,11 @@ class _Level1 extends State {
                     ],
                   ),
                 ),
+                //#endregion
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
+                      //#region GÖREVLER
                       Container(
                         width: 200,
                         height: 300,
@@ -255,6 +256,8 @@ class _Level1 extends State {
                           ],
                         ),
                       ),
+                      //#endregion
+                      //#region YAPILACAKLAR
                       Container(
                         width: 200,
                         height: 300,
@@ -274,6 +277,7 @@ class _Level1 extends State {
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Text(
                               "Yapılacaklar",
@@ -284,20 +288,39 @@ class _Level1 extends State {
                             ),
                             Container(
                               width: 200,
-                              height: 250,
+                              height: 205,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 border: Border.all(
                                   width: 0.0,
                                 ),
                               ),
-                              child: ListView(
-                                  //shrinkWrap: true,
-                                  children: loading ? [] : tasksList),
+                              child: ListDisplay()
+                            ),
+                            SizedBox(
+                              width: 110,
+                              height: 30,
+                              child: ElevatedButton(
+                                  onPressed: deleteToAllTask,
+                                  style: ButtonStyle(
+                                    backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.white),
+                                    shadowColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.black),
+                                  ),
+                                  child: Text(
+                                    "Temizle",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
+                                  )),
                             ),
                           ],
                         ),
                       ),
+                      //#endregion
+                      //#region OYUN ALANI
                       Container(
                         color: Colors.white,
                         width: 200,
@@ -309,36 +332,56 @@ class _Level1 extends State {
                           ],
                         ),
                       ),
+                      //#endregion
                     ]),
-              ])),
+              ]
+          )
+      ),
     );
   }
 
+  //#region METHODS
+
   addToTask(String taskName) {
-
     setState(() {
-      loading = true;
-    });
-
-    tasksList.add(new ListTile(
-      title: Text(taskName),
-      trailing: IconButton(
-        icon: Icon(Icons.highlight_remove_sharp),
-        onPressed: () {
-          // delete task .
-        },
+      tasksList.add(new ListTile(
+        title: Text(taskName),
+        trailing: IconButton(
+          icon: Icon(Icons.highlight_remove_sharp),
+          onPressed: () {
+            deleteToTask(taskName);
+          },
+        ),
       ),
-    ));
-
-    setState(() {
-      loading = false;
+      );
     });
-
   }
 
-  // loadingTrue() {
-  //   // setState(() {
-  //   loading = true;
-  //   // });
-  // }
+  deleteToAllTask(){
+    setState(() {
+      tasksList.clear();
+    });
+  }
+
+  deleteToTask(String taskName){
+
+    setState(() {
+      // delete to any task.
+    });
+  }
+
+  //#endregion
+
+}
+
+class ListDisplay extends StatelessWidget {
+  @override
+  Widget build (BuildContext ctxt) {
+    return new ListView.builder(
+        itemCount: tasksList.length,
+        itemBuilder: (BuildContext ctxt, index) {
+          return tasksList[index];
+        },
+    );
+  }
 }
