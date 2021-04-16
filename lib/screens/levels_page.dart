@@ -10,12 +10,14 @@ class LevelsPage extends StatefulWidget {
   }
 }
 
+const colorLacivert = const Color(0xFF151531);
+
 class _LevelsPage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.grey[200],
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -31,6 +33,10 @@ class _LevelsPage extends State {
                         width: 100.0,
                         height: 70.0,
                         child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all<Color>(colorLacivert)
+                          ),
                           onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => Level1()),
@@ -164,6 +170,10 @@ class _LevelsPage extends State {
             Container(
               width: 100,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 onPressed: () => Navigator.push(context,
                   MaterialPageRoute(builder: (context) => WelcomePage()),
                 ),

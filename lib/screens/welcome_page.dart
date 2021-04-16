@@ -14,12 +14,15 @@ class WelcomePage extends StatefulWidget {
   }
 }
 
+const colorLacivert = const Color(0xFF151531);
+
 class _WelcomePage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: colorLacivert,
         centerTitle: true,
         title: Text("Mr.Code Jr",
             style: TextStyle(
@@ -35,6 +38,10 @@ class _WelcomePage extends State {
               width: 170.0,
               height: 50.0,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 child: const Text('Oyna', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -46,6 +53,10 @@ class _WelcomePage extends State {
               width: 170.0,
               height: 50.0,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 child: const Text('Skorlar', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -57,6 +68,10 @@ class _WelcomePage extends State {
               width: 170.0,
               height: 50.0,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 child: const Text('Ayarlar', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -68,6 +83,10 @@ class _WelcomePage extends State {
               width: 170.0,
               height: 50.0,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 child: const Text('Hakkında', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -79,6 +98,10 @@ class _WelcomePage extends State {
               width: 170.0,
               height: 50.0,
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all<Color>(colorLacivert)
+                ),
                 child: const Text('Çıkış', style: TextStyle(fontSize: 20)),
                 onPressed: () => exit(0),
               ),

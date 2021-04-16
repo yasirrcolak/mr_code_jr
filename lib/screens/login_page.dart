@@ -10,24 +10,21 @@ class LoginPage extends StatefulWidget {
   }
 }
 
+const colorLacivert = const Color(0xFF151531);
+
 class _LoginPage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      // appBar: AppBar(
-      //   title: Text("Login Page"),
-      // ),
+      backgroundColor: Colors.white,
       body: Row(
-          // color: Colors.greenAccent,
-          // child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(30.0),
                 child: Center(
-                  child: Image.asset('assets/images/isar_logo_siyah.png'),
+                  child: Image.asset('assets/images/isar_logo_1.png'),
                 ),
               ),
             ),
@@ -60,7 +57,7 @@ class _LoginPage extends State {
                       ElevatedButton(
                         style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.black)),
+                                MaterialStateProperty.all<Color>(colorLacivert)),
                         child: Text(
                           "Giriş",
                           style: TextStyle(fontSize: 20.0, color: Colors.white),
@@ -77,7 +74,7 @@ class _LoginPage extends State {
                           child: Text(
                             "Demo Versiyonunu Dene",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: colorLacivert,
                             ),
                           ),
                         ),

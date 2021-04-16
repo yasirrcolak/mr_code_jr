@@ -8,12 +8,15 @@ class HighScorePage extends StatefulWidget {
   }
 }
 
+const colorLacivert = const Color(0xFF151531);
+
 class _HighScorePage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: colorLacivert,
         title: Text("Yüksek Skorlar"),
       ),
     );
