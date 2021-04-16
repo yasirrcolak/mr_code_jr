@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
