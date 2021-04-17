@@ -1,35 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:mr_code_jr/screens/levels_page.dart';
 
-class Level1 extends StatefulWidget {
+class Level11 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Level1();
+    return _Level11();
   }
 }
 
 List<Widget> tasksList = [];
 
-class _Level1 extends State {
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
-  @override
-  dispose() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-    super.dispose();
-  }
-
+class _Level11 extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,7 +86,7 @@ class _Level1 extends State {
                         ),
                         child: Center(
                           child: Text(
-                            "Level 1",
+                            "Level 11",
                             style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
@@ -150,7 +132,8 @@ class _Level1 extends State {
                           child: ElevatedButton(
                             onPressed: () => Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Level1()),
+                              MaterialPageRoute(
+                                  builder: (context) => Level11()),
                             ),
                             style: ButtonStyle(
                                 backgroundColor:
@@ -397,10 +380,10 @@ class _Level1 extends State {
 
 class ListDisplay extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext ctxt) {
     return new ListView.builder(
       itemCount: tasksList.length,
-      itemBuilder: (BuildContext context, index) {
+      itemBuilder: (BuildContext ctxt, index) {
         return tasksList[index];
       },
     );

@@ -1,12 +1,11 @@
-import 'dart:io';
 import 'package:flutter/services.dart';
-import 'package:mr_code_jr/levels/level1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
-import 'package:mr_code_jr/screens/welcome_page.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -18,6 +17,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 
 // class MyHomePage extends StatefulWidget {
 //   @override

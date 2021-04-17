@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/about_page.dart';
@@ -40,8 +39,7 @@ class _WelcomePage extends State {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all<Color>(colorLacivert)
-                ),
+                        MaterialStateProperty.all<Color>(colorLacivert)),
                 child: const Text('Oyna', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -55,8 +53,7 @@ class _WelcomePage extends State {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all<Color>(colorLacivert)
-                ),
+                        MaterialStateProperty.all<Color>(colorLacivert)),
                 child: const Text('Skorlar', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -70,8 +67,7 @@ class _WelcomePage extends State {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all<Color>(colorLacivert)
-                ),
+                        MaterialStateProperty.all<Color>(colorLacivert)),
                 child: const Text('Ayarlar', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -85,8 +81,7 @@ class _WelcomePage extends State {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all<Color>(colorLacivert)
-                ),
+                        MaterialStateProperty.all<Color>(colorLacivert)),
                 child: const Text('Hakkında', style: TextStyle(fontSize: 20)),
                 onPressed: () => Navigator.push(
                   context,
@@ -100,8 +95,7 @@ class _WelcomePage extends State {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor:
-                    MaterialStateProperty.all<Color>(colorLacivert)
-                ),
+                        MaterialStateProperty.all<Color>(colorLacivert)),
                 child: const Text('Çıkış', style: TextStyle(fontSize: 20)),
                 onPressed: () => exit(0),
               ),
