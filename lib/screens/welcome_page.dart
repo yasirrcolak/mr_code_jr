@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/about_page.dart';
-import 'package:mr_code_jr/screens/high_score_page.dart';
 import 'package:mr_code_jr/screens/levels_page.dart';
 import 'package:mr_code_jr/screens/settings_page.dart';
 
@@ -44,20 +43,6 @@ class _WelcomePage extends State {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LevelsPage()),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 170.0,
-              height: 50.0,
-              child: ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(colorLacivert)),
-                child: const Text('Skorlar', style: TextStyle(fontSize: 20)),
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HighScorePage()),
                 ),
               ),
             ),
