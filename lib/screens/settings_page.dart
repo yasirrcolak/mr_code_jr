@@ -65,7 +65,7 @@ class _SettingsPage extends State {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SettingsPage()),
-                    );
+                    ); // sıkıntı app bar back button. !!!
                   },
                   label: Text(
                     "Kaydır",

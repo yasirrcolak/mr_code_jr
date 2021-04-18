@@ -330,7 +330,7 @@ class _Level2 extends State {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Image.asset('assets/images/gamezone.png')
+                            Image.asset('assets/images/level2.png')
                           ],
                         ),
                       ),
