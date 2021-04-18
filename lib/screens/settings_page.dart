@@ -62,10 +62,6 @@ class _SettingsPage extends State {
                         sesDurum = "Açık";
                       });
                     }
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SettingsPage()),
-                    ); // sıkıntı app bar back button. !!!
                   },
                   label: Text(
                     "Kaydır",

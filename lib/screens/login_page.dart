@@ -121,26 +121,21 @@ class _LoginPage extends State {
                                 text: 'Üye Ol',
                                 style: TextStyle(
                                     color: colorLacivert,
-                                    fontWeight: FontWeight.bold)),
-                          ]),
+                                    fontWeight: FontWeight.bold)
+                            ),
+                          ]
+                          ),
                         ),
                       ],
-                      // onTap: () => Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => WelcomePage()),
-                      // ),
-                      // child: Text(
-                      //   "",
-                      //   style: TextStyle(
-                      //     color: colorLacivert,
-                      //   ),
-                      // ),
                     ),
                   )
-                ]),
+                ]
+            ),
           ),
-        ))
-      ]),
+        )
+        )
+      ]
+      ),
     );
   }
 }
