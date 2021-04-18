@@ -312,23 +312,6 @@ class _LevelsPage extends State {
                 ],
               ),
             ),
-            Container(
-              width: 100,
-              child: ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(colorLacivert)),
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WelcomePage()),
-                ),
-                child: Icon(
-                  Icons.arrow_back_sharp,
-                  color: Colors.white,
-                  size: 30.0,
-                ),
-              ),
-            )
           ],
         ),
       ),

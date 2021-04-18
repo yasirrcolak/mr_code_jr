@@ -13,6 +13,9 @@ const colorLacivert = const Color(0xFF151531);
 String sesDurum = "Açık";
 
 class _SettingsPage extends State {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

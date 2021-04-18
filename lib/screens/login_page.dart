@@ -14,6 +14,7 @@ class LoginPage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _LoginPage extends State {
+
   void initState() {
     super.initState();
     SystemChrome.setPreferredOrientations([
@@ -98,7 +99,7 @@ class _LoginPage extends State {
                       style: TextStyle(fontSize: 20.0, color: Colors.white),
                     ),
                   ),
-                  Padding(padding: EdgeInsets.only(bottom: 40.0)),
+                  Padding(padding: EdgeInsets.only(bottom: 15.0)),
                   Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
