@@ -4,19 +4,50 @@ import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => LoginPage()));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]); // üst ve alt bar gizleme.
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
-      home: LoginPage(),
-      debugShowCheckedModeBanner: false,
+      home: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/İsarSoft.png"),
+                fit: BoxFit.cover)),
+      ),
     );
   }
 }
+
+
+// class MyApp extends StatelessWidget {
+
+//   @override
+//   Widget build(BuildContext context) {
+//     SystemChrome.setEnabledSystemUIOverlays([]); // üst ve alt bar gizleme.
+//     return MaterialApp(
+//       home: LoginPage(),
+//       debugShowCheckedModeBanner: false,
+//     );
+//   }
+// }
 
 
 
