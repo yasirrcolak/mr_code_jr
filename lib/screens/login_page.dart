@@ -36,8 +36,9 @@ class _LoginPage extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <
-          Widget>[
+      body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
         Expanded(
           child: Container(
             padding: EdgeInsets.all(30.0),
