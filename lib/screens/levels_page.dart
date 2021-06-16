@@ -29,14 +29,6 @@ const colorLacivert = const Color(0xFF151531);
 const colorSari = const Color(0xFFd19922);
 
 class _LevelsPage extends State {
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -16,7 +16,6 @@ class WelcomePage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _WelcomePage extends State {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
