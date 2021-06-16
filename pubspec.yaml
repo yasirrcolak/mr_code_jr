@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   slider_button: ^0.6.0
+  flutter_swipable: ^0.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -76,6 +77,23 @@ flutter:
     - assets/images/level13.png
     - assets/images/level14.png
     - assets/images/level15.png
+    - assets/images/swipedImage.png
+    - assets/images/cardLevelImage1.png
+    - assets/images/cardLevelImage2.png
+    - assets/images/cardLevelImage3.png
+    - assets/images/cardLevelImage4.png
+    - assets/images/cardLevelImage5.png
+    - assets/images/cardLevelImage6.png
+    - assets/images/cardLevelImage7.png
+    - assets/images/cardLevelImage8.png
+    - assets/images/cardLevelImage9.png
+    - assets/images/cardLevelImage10.png
+    - assets/images/cardLevelImage11.png
+    - assets/images/cardLevelImage12.png
+    - assets/images/cardLevelImage13.png
+    - assets/images/cardLevelImage14.png
+    - assets/images/cardLevelImage15.png
+    - assets/images/commingSoon.png
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

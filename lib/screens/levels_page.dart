@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,6 +18,7 @@ import 'package:mr_code_jr/levels/level6.dart';
 import 'package:mr_code_jr/levels/level7.dart';
 import 'package:mr_code_jr/levels/level8.dart';
 import 'package:mr_code_jr/levels/level9.dart';
+import 'package:mr_code_jr/models/tinder.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
 class LevelsPage extends StatefulWidget {
@@ -29,18 +32,145 @@ const colorLacivert = const Color(0xFF151531);
 const colorSari = const Color(0xFFd19922);
 
 class _LevelsPage extends State {
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+             // Text("Leveller", style: TextStyle(fontSize: 20.0, color: colorLacivert),),
+              Container(
+                child: Tinder(),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    width: 120,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.4),
+                          spreadRadius: 4,
+                          blurRadius: 20.0,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(
+                        20.0,
+                      ),),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WelcomePage()),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            colorLacivert),
+                      ),
+                      child: Text("Geri", style: TextStyle(fontSize: 20.0, color: Colors.white),),
+                    ),
+                  ),
+                  Container(
+                    width: 120,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.4),
+                          spreadRadius: 4,
+                          blurRadius: 20.0,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(
+                        20.0,
+                      ),),
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LevelsPage()),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            colorLacivert),
+                      ),
+                      child: Text("Başa Dön", style: TextStyle(fontSize: 20.0, color: Colors.white),),
+                    ),
+                  ),
+                ],
+              ),
+
+            ],
+          )
+
+
+
+
+
+
+
+
+
+
+
+        )
+
+
+
+
+
+
+
+
+    );
+
+
+    /*
       body: Container(
+        color: colorLacivert,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Text("Levels Page."),
+            Container(
+              height: 50,
+              color: Colors.white,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: new List.generate(30, (int index) {
+                  return Column(children: [
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all<Color>(colorLacivert),
+                      ),
+                      child: Text(
+                        '$index',
+                        style: TextStyle(fontSize: 20.0, color: colorSari),
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(50.0)),
+                  ]);
+                }),
+              ),
+            ),
+            ElevatedButton(
+                child: Text("Geri")
+            ),
+          ],
+        ),
+      )
+      */
+
+
+
+
+
+
+
+
+    /*
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -305,7 +435,8 @@ class _LevelsPage extends State {
             ),
           ],
         ),
-      ),
-    );
+
+
+        */
   }
 }
