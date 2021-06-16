@@ -1,29 +1,22 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mr_code_jr/screens/sign_up_page.dart';
+import 'package:mr_code_jr/screens/login_page.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 
-class LoginPage extends StatefulWidget {
+class SignUpPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _LoginPage();
+    return _SignUpPage();
   }
 }
 
 const colorLacivert = const Color(0xFF151531);
 
-class _LoginPage extends State {
+class _SignUpPage extends State {
   @override
   Widget build(BuildContext context) {
-    if (Platform.isAndroid)
-      SystemChrome.setPreferredOrientations([
-        DeviceOrientation.landscapeRight,
-        DeviceOrientation.landscapeLeft,
-      ]);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <
@@ -47,7 +40,6 @@ class _LoginPage extends State {
                 children: <Widget>[
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
-                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: colorLacivert)),
@@ -82,7 +74,7 @@ class _LoginPage extends State {
                         backgroundColor:
                             MaterialStateProperty.all<Color>(colorLacivert)),
                     child: Text(
-                      "Giriş",
+                      "Kayıt Ol",
                       style: TextStyle(fontSize: 20.0, color: Colors.white),
                     ),
                   ),
@@ -95,7 +87,7 @@ class _LoginPage extends State {
                           textAlign: TextAlign.center,
                           text: TextSpan(children: <InlineSpan>[
                             TextSpan(
-                                text: 'Üye değil misiniz ? ',
+                                text: 'Zaten kayıtlı mısınız ? ',
                                 style: TextStyle(color: Colors.black87)),
                             TextSpan(
                                 recognizer: TapGestureRecognizer()
@@ -103,10 +95,9 @@ class _LoginPage extends State {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                SignUpPage()));
+                                            builder: (context) => LoginPage()));
                                   },
-                                text: 'Üye Ol',
+                                text: 'Giriş yap',
                                 style: TextStyle(
                                     color: colorLacivert,
                                     fontWeight: FontWeight.bold)),
