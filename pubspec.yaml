@@ -77,6 +77,21 @@ flutter:
     - assets/images/level13.png
     - assets/images/level14.png
     - assets/images/level15.png
+    - assets/images/level16.png
+    - assets/images/level17.png
+    - assets/images/level18.png
+    - assets/images/level19.png
+    - assets/images/level20.png
+    - assets/images/level21.png
+    - assets/images/level22.png
+    - assets/images/level23.png
+    - assets/images/level24.png
+    - assets/images/level25.png
+    - assets/images/level26.png
+    - assets/images/level27.png
+    - assets/images/level28.png
+    - assets/images/level29.png
+    - assets/images/level30.png
     - assets/images/swipedImage.png
     - assets/images/cardLevelImage1.png
     - assets/images/cardLevelImage2.png
@@ -93,6 +108,21 @@ flutter:
     - assets/images/cardLevelImage13.png
     - assets/images/cardLevelImage14.png
     - assets/images/cardLevelImage15.png
+    - assets/images/cardLevelImage16.png
+    - assets/images/cardLevelImage17.png
+    - assets/images/cardLevelImage18.png
+    - assets/images/cardLevelImage19.png
+    - assets/images/cardLevelImage20.png
+    - assets/images/cardLevelImage21.png
+    - assets/images/cardLevelImage22.png
+    - assets/images/cardLevelImage23.png
+    - assets/images/cardLevelImage24.png
+    - assets/images/cardLevelImage25.png
+    - assets/images/cardLevelImage26.png
+    - assets/images/cardLevelImage27.png
+    - assets/images/cardLevelImage28.png
+    - assets/images/cardLevelImage29.png
+    - assets/images/cardLevelImage30.png
     - assets/images/commingSoon.png
 
   #   - images/a_dot_burr.jpeg

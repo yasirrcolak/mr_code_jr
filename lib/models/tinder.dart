@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_swipable/flutter_swipable.dart';
 import 'package:mr_code_jr/levels/level1.dart';
-import 'package:mr_code_jr/levels/level10.dart';
-import 'package:mr_code_jr/levels/level11.dart';
-import 'package:mr_code_jr/levels/level12.dart';
-import 'package:mr_code_jr/levels/level13.dart';
-import 'package:mr_code_jr/levels/level14.dart';
-import 'package:mr_code_jr/levels/level15.dart';
 import 'package:mr_code_jr/levels/level2.dart';
 import 'package:mr_code_jr/levels/level3.dart';
 import 'package:mr_code_jr/levels/level4.dart';
@@ -16,6 +9,27 @@ import 'package:mr_code_jr/levels/level6.dart';
 import 'package:mr_code_jr/levels/level7.dart';
 import 'package:mr_code_jr/levels/level8.dart';
 import 'package:mr_code_jr/levels/level9.dart';
+import 'package:mr_code_jr/levels/level10.dart';
+import 'package:mr_code_jr/levels/level11.dart';
+import 'package:mr_code_jr/levels/level12.dart';
+import 'package:mr_code_jr/levels/level13.dart';
+import 'package:mr_code_jr/levels/level14.dart';
+import 'package:mr_code_jr/levels/level15.dart';
+import 'package:mr_code_jr/levels/level16.dart';
+import 'package:mr_code_jr/levels/level17.dart';
+import 'package:mr_code_jr/levels/level18.dart';
+import 'package:mr_code_jr/levels/level19.dart';
+import 'package:mr_code_jr/levels/level20.dart';
+import 'package:mr_code_jr/levels/level21.dart';
+import 'package:mr_code_jr/levels/level22.dart';
+import 'package:mr_code_jr/levels/level23.dart';
+import 'package:mr_code_jr/levels/level24.dart';
+import 'package:mr_code_jr/levels/level25.dart';
+import 'package:mr_code_jr/levels/level26.dart';
+import 'package:mr_code_jr/levels/level27.dart';
+import 'package:mr_code_jr/levels/level28.dart';
+import 'package:mr_code_jr/levels/level29.dart';
+import 'package:mr_code_jr/levels/level30.dart';
 import 'package:mr_code_jr/screens/levels_page.dart';
 
 const colorLacivert = const Color(0xFF151531);
@@ -25,6 +39,66 @@ final List data = [
   {
     'levelClass': LevelsPage(),
     'image': 'assets/images/commingSoon.png'
+  },
+  {
+    'levelClass': Level30(),
+    'image': 'assets/images/cardLevelImage30.png'
+  },
+  {
+    'levelClass': Level29(),
+    'image': 'assets/images/cardLevelImage29.png'
+  },
+  {
+    'levelClass': Level28(),
+    'image': 'assets/images/cardLevelImage28.png'
+  },
+  {
+    'levelClass': Level27(),
+    'image': 'assets/images/cardLevelImage27.png'
+  },
+  {
+    'levelClass': Level26(),
+    'image': 'assets/images/cardLevelImage26.png'
+  },
+  {
+    'levelClass': Level25(),
+    'image': 'assets/images/cardLevelImage25.png'
+  },
+  {
+    'levelClass': Level24(),
+    'image': 'assets/images/cardLevelImage24.png'
+  },
+  {
+    'levelClass': Level23(),
+    'image': 'assets/images/cardLevelImage23.png'
+  },
+  {
+    'levelClass': Level22(),
+    'image': 'assets/images/cardLevelImage22.png'
+  },
+  {
+    'levelClass': Level21(),
+    'image': 'assets/images/cardLevelImage21.png'
+  },
+  {
+    'levelClass': Level20(),
+    'image': 'assets/images/cardLevelImage20.png'
+  },
+  {
+    'levelClass': Level19(),
+    'image': 'assets/images/cardLevelImage19.png'
+  },
+  {
+    'levelClass': Level18(),
+    'image': 'assets/images/cardLevelImage18.png'
+  },
+  {
+    'levelClass': Level17(),
+    'image': 'assets/images/cardLevelImage17.png'
+  },
+  {
+    'levelClass': Level16(),
+    'image': 'assets/images/cardLevelImage16.png'
   },
   {
     'levelClass': Level15(),
@@ -159,6 +233,66 @@ class _TinderState extends State<Tinder> {
       data[15]['levelClass'],
       data[15]['image'],
     ),
+    Card(
+      data[16]['levelClass'],
+      data[16]['image'],
+    ),
+    Card(
+      data[17]['levelClass'],
+      data[17]['image'],
+    ),
+    Card(
+      data[18]['levelClass'],
+      data[18]['image'],
+    ),
+    Card(
+      data[19]['levelClass'],
+      data[19]['image'],
+    ),
+    Card(
+      data[20]['levelClass'],
+      data[20]['image'],
+    ),
+    Card(
+      data[21]['levelClass'],
+      data[21]['image'],
+    ),
+    Card(
+      data[22]['levelClass'],
+      data[22]['image'],
+    ),
+    Card(
+      data[23]['levelClass'],
+      data[23]['image'],
+    ),
+    Card(
+      data[24]['levelClass'],
+      data[24]['image'],
+    ),
+    Card(
+      data[25]['levelClass'],
+      data[25]['image'],
+    ),
+    Card(
+      data[26]['levelClass'],
+      data[26]['image'],
+    ),
+    Card(
+      data[27]['levelClass'],
+      data[27]['image'],
+    ),
+    Card(
+      data[28]['levelClass'],
+      data[28]['image'],
+    ),
+    Card(
+      data[29]['levelClass'],
+      data[29]['image'],
+    ),
+    Card(
+      data[30]['levelClass'],
+      data[30]['image'],
+    ),
   ];
 
   @override
@@ -188,7 +322,7 @@ class Card extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
+                  color: Colors.black.withOpacity(0.05),
                   spreadRadius: 4,
                   blurRadius: 15.0,
                 )
