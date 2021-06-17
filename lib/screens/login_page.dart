@@ -47,6 +47,7 @@ class _LoginPage extends State {
                 children: <Widget>[
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    cursorColor: colorLacivert,
                     obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -61,6 +62,7 @@ class _LoginPage extends State {
                   ),
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    cursorColor: colorLacivert,
                     obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
