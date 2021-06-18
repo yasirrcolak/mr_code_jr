@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
+import 'package:mr_code_jr/services/auth_methods.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -15,6 +19,8 @@ class SignUpPage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _SignUpPage extends State {
+  String user_email = "";
+  String user_password = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,8 +46,10 @@ class _SignUpPage extends State {
                 children: <Widget>[
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    onChanged: (value) {
+                      user_email = value;
+                    },
                     cursorColor: colorLacivert,
-                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: colorLacivert)),
@@ -55,6 +63,9 @@ class _SignUpPage extends State {
                   ),
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    onChanged: (value) {
+                      user_password = value;
+                    },
                     cursorColor: colorLacivert,
                     obscureText: true,
                     decoration: InputDecoration(
@@ -71,8 +82,11 @@ class _SignUpPage extends State {
                   ),
                   Padding(padding: EdgeInsets.only(bottom: 20.0)),
                   ElevatedButton(
-                    onPressed: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => WelcomePage())),
+                    onPressed: () {
+                      context
+                          .read<FlutterFireAuthService>()
+                          .createAccount(user_email, user_password);
+                    },
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(colorLacivert)),

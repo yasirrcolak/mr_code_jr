@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,6 @@ class _LoginPage extends State {
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
                     cursorColor: colorLacivert,
-                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: colorLacivert)),

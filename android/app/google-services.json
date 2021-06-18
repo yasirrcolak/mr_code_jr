@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155965123509",
+    "project_id": "mrcodejrfirebase",
+    "storage_bucket": "mrcodejrfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155965123509:android:c1acfe1111e570821547fc",
+        "android_client_info": {
+          "package_name": "com.isaryazilim.mr_code_jr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155965123509-sbgumq10a4fqg5q2nl8ouu5a3t0vdfd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN48k6V5qVR2-7qnMAPRxU_kPSPSnKEcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155965123509-sbgumq10a4fqg5q2nl8ouu5a3t0vdfd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
