@@ -1,12 +1,30 @@
 import 'dart:io';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
+import 'package:mr_code_jr/services/auth_methods.dart';
+import 'package:provider/provider.dart';
+import 'package:easy_localization/easy_localization.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  //setupLocator();
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
+  /*
+  runApp(
+    EasyLocalization(
+        supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
+        path: 'assets/translations',
+        fallbackLocale: Locale('en', 'US'),
+        child: MyApp()
+    ),
+  );
+
+   */
 }
 
 class MyApp extends StatefulWidget {
@@ -23,6 +41,17 @@ class _MyAppState extends State<MyApp> {
         DeviceOrientation.landscapeRight,
       ]);
     SystemChrome.setEnabledSystemUIOverlays([]);
-    return MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage());
+    return MultiProvider(
+        providers: [
+          Provider<FlutterFireAuthService>(
+            create: (_) => FlutterFireAuthService(FirebaseAuth.instance),
+          ),
+          StreamProvider(
+            create: (context) =>
+            context.read<FlutterFireAuthService>().authStateChanges,
+            initialData: null,
+          ),
+        ],
+        child: MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
   }
 }

@@ -19,8 +19,8 @@ class SignUpPage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _SignUpPage extends State {
-  String user_email = "";
-  String user_password = "";
+  String user_email;
+  String user_password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

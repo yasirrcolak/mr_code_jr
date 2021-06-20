@@ -23,6 +23,7 @@ environment:
 dependencies:
   firebase_core: ^1.3.0
   provider: ^5.0.0
+  easy_localization: ^3.0.0
   flutter_bloc: ^7.0.1
   cloud_firestore: ^2.2.2
   flutter:
