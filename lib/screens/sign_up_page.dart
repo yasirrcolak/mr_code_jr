@@ -3,11 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
-import 'package:mr_code_jr/screens/welcome_page.dart';
 import 'package:mr_code_jr/services/auth_methods.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -19,6 +17,9 @@ class SignUpPage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _SignUpPage extends State {
+  var _controllerEmail = TextEditingController();
+  var _controllerPassword = TextEditingController();
+
   String user_email;
   String user_password;
   @override
@@ -46,6 +47,7 @@ class _SignUpPage extends State {
                 children: <Widget>[
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    controller: _controllerEmail,
                     onChanged: (value) {
                       user_email = value;
                     },
@@ -63,6 +65,7 @@ class _SignUpPage extends State {
                   ),
                   Padding(padding: EdgeInsets.all(15.0)),
                   TextField(
+                    controller: _controllerPassword,
                     onChanged: (value) {
                       user_password = value;
                     },
@@ -85,7 +88,9 @@ class _SignUpPage extends State {
                     onPressed: () {
                       context
                           .read<FlutterFireAuthService>()
-                          .createAccount(user_email, user_password);
+                          .createAccount(user_email, user_password, context);
+                      _controllerEmail.clear();
+                      _controllerPassword.clear();
                     },
                     style: ButtonStyle(
                         backgroundColor:

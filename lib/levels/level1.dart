@@ -13,23 +13,6 @@ class Level1 extends StatefulWidget {
 List<Widget> tasksList = [];
 
 class _Level1 extends State {
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-    ]);
-  }
-
-  @override
-  dispose() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +23,7 @@ class _Level1 extends State {
               children: <Widget>[
                 //#region APP BAR
                 Container(
-                  width: 665,
+                  width: 710,
                   height: 50,
                   decoration: BoxDecoration(
                     boxShadow: [

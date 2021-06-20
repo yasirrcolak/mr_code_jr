@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/welcome_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'general_methods.dart';
 
 class FlutterFireAuthService {
   final FirebaseAuth _firebaseAuth;
@@ -11,7 +12,8 @@ class FlutterFireAuthService {
 
   Stream<User> get authStateChanges => _firebaseAuth.idTokenChanges();
 
-  Future<User> createAccount(String email, String password) async {
+  Future<User> createAccount(
+      String email, String password, BuildContext context) async {
     FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
     try {
@@ -21,7 +23,7 @@ class FlutterFireAuthService {
 
       if (user != null) {
         print("Account created succesfully");
-
+        succesfulAlert(context);
         await _firestore
             .collection('users')
             .doc(_firebaseAuth.currentUser.uid)
@@ -34,10 +36,12 @@ class FlutterFireAuthService {
         return user;
       } else {
         print("Account creation failed");
+        failedAlert(context);
         return user;
       }
     } catch (e) {
       print(e);
+      failedAlert(context);
       return null;
     }
   }
@@ -62,12 +66,12 @@ class FlutterFireAuthService {
         return user;
       } else {
         print("Login Failed");
-        // showAlert("Error!", "Login Failed", context);
+        failedAlert(context);
         return user;
       }
     } catch (e) {
       print(e);
-      // showAlert("Error!", e.toString(), context);
+      failedAlert(context);
       return null;
     }
   }

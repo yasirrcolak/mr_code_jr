@@ -22,7 +22,7 @@ class _Level12 extends State {
               children: <Widget>[
                 //#region APP BAR
                 Container(
-                  width: 665,
+                  width: 710,
                   height: 50,
                   decoration: BoxDecoration(
                     boxShadow: [

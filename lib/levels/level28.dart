@@ -22,7 +22,7 @@ class _Level28 extends State {
               children: <Widget>[
                 //#region APP BAR
                 Container(
-                  width: 665,
+                  width: 710,
                   height: 50,
                   decoration: BoxDecoration(
                     boxShadow: [
@@ -64,8 +64,8 @@ class _Level28 extends State {
                             },
                             style: ButtonStyle(
                                 backgroundColor:
-                                MaterialStateProperty.all<Color>(
-                                    Colors.white)),
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.white)),
                             child: Icon(
                               Icons.arrow_back_sharp,
                               color: colorLacivert,
@@ -108,8 +108,8 @@ class _Level28 extends State {
                           child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor:
-                                MaterialStateProperty.all<Color>(
-                                    Colors.white)),
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.white)),
                             child: Icon(
                               Icons.play_arrow_sharp,
                               color: colorLacivert,
@@ -137,8 +137,8 @@ class _Level28 extends State {
                             ),
                             style: ButtonStyle(
                                 backgroundColor:
-                                MaterialStateProperty.all<Color>(
-                                    Colors.white)),
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.white)),
                             child: Icon(
                               Icons.refresh_sharp,
                               color: colorLacivert,
@@ -188,11 +188,11 @@ class _Level28 extends State {
                                   onPressed: () => {addToTask("Yukarı")},
                                   style: ButtonStyle(
                                     backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorLacivert),
+                                        MaterialStateProperty.all<Color>(
+                                            colorLacivert),
                                     shadowColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.black),
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.black),
                                   ),
                                   child: Text(
                                     "Yukarı",
@@ -207,11 +207,11 @@ class _Level28 extends State {
                                   onPressed: () => {addToTask("Aşağı")},
                                   style: ButtonStyle(
                                     backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorLacivert),
+                                        MaterialStateProperty.all<Color>(
+                                            colorLacivert),
                                     shadowColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
                                   ),
                                   child: Text(
                                     "Aşağı",
@@ -226,11 +226,11 @@ class _Level28 extends State {
                                   onPressed: () => {addToTask("Sağa")},
                                   style: ButtonStyle(
                                     backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorLacivert),
+                                        MaterialStateProperty.all<Color>(
+                                            colorLacivert),
                                     shadowColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
                                   ),
                                   child: Text(
                                     "Sağa",
@@ -245,11 +245,11 @@ class _Level28 extends State {
                                   onPressed: () => {addToTask("Sola")},
                                   style: ButtonStyle(
                                     backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorLacivert),
+                                        MaterialStateProperty.all<Color>(
+                                            colorLacivert),
                                     shadowColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
                                   ),
                                   child: Text(
                                     "Sola",
@@ -307,11 +307,11 @@ class _Level28 extends State {
                                   onPressed: deleteToAllTask,
                                   style: ButtonStyle(
                                     backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        colorLacivert),
+                                        MaterialStateProperty.all<Color>(
+                                            colorLacivert),
                                     shadowColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Colors.white),
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
                                   ),
                                   child: Text(
                                     "Temizle",
@@ -325,16 +325,14 @@ class _Level28 extends State {
                       //#endregion
                       //#region OYUN ALANI
                       Container(
-                        color: Colors.white,
                         width: 200,
                         height: 300,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset('assets/images/level28.png')
-                          ],
-                        ),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/level28.png'),
+                                fit: BoxFit.cover)),
                       ),
+
                       //#endregion
                     ]),
               ])),
