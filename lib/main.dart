@@ -9,22 +9,10 @@ import 'package:mr_code_jr/services/auth_methods.dart';
 import 'package:provider/provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //setupLocator();
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
-  /*
-  runApp(
-    EasyLocalization(
-        supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
-        path: 'assets/translations',
-        fallbackLocale: Locale('en', 'US'),
-        child: MyApp()
-    ),
-  );
-
-   */
 }
 
 class MyApp extends StatefulWidget {
@@ -48,10 +36,11 @@ class _MyAppState extends State<MyApp> {
           ),
           StreamProvider(
             create: (context) =>
-            context.read<FlutterFireAuthService>().authStateChanges,
+                context.read<FlutterFireAuthService>().authStateChanges,
             initialData: null,
           ),
         ],
-        child: MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
+        child:
+            MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
   }
 }

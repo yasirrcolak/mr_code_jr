@@ -11,6 +11,8 @@ void failedAlert(
     content: Text("Hatalı giriş yaptınız"),
     actions: [
       ElevatedButton(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(colorLacivert)),
           onPressed: () {
             Navigator.of(context, rootNavigator: true).pop();
           },
@@ -27,6 +29,8 @@ void succesfulAlert(BuildContext context) {
     content: Text("Giriş yapabilirsiniz"),
     actions: [
       ElevatedButton(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(colorLacivert)),
           onPressed: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => LoginPage()));
