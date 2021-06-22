@@ -3,8 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:mr_code_jr/screens/login_page.dart';
 
-void failedAlert(
-    /* String alertTitle, String alertContent,*/ BuildContext context) {
+void failedAlert(BuildContext context) {
   AlertDialog alertDialog;
   alertDialog = AlertDialog(
     title: Text("Başarısız"),
