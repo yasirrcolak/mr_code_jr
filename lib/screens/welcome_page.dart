@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:mr_code_jr/screens/about_page.dart';
 import 'package:mr_code_jr/screens/levels_page.dart';
 import 'package:mr_code_jr/screens/settings_page.dart';
@@ -16,7 +15,6 @@ class WelcomePage extends StatefulWidget {
 const colorLacivert = const Color(0xFF151531);
 
 class _WelcomePage extends State {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

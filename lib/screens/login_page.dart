@@ -48,7 +48,6 @@ class _LoginPage extends State {
               margin: EdgeInsets.all(20.0),
               child: SingleChildScrollView(
                 child: Column(
-                    // padding: EdgeInsets.all(20.0),
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Padding(padding: EdgeInsets.all(15.0)),

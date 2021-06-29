@@ -13,7 +13,6 @@ const colorLacivert = const Color(0xFF151531);
 String sesDurum = "Açık";
 
 class _SettingsPage extends State {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,6 @@ class _SettingsPage extends State {
         title: Text("Ayarlar"),
       ),
       body: Container(
-          // color: colorSari,
           child: Center(
         child: Container(
           width: 500.0,
@@ -43,7 +41,6 @@ class _SettingsPage extends State {
             ),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
-          // color: colorLacivert,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

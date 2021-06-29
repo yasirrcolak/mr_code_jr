@@ -36,130 +36,37 @@ const colorLacivert = const Color(0xFF151531);
 const colorSari = const Color(0xFFd19922);
 
 final List data = [
-  {
-    'levelClass': LevelsPage(),
-    'image': 'assets/images/commingSoon.png'
-  },
-  {
-    'levelClass': Level30(),
-    'image': 'assets/images/cardLevelImage30.png'
-  },
-  {
-    'levelClass': Level29(),
-    'image': 'assets/images/cardLevelImage29.png'
-  },
-  {
-    'levelClass': Level28(),
-    'image': 'assets/images/cardLevelImage28.png'
-  },
-  {
-    'levelClass': Level27(),
-    'image': 'assets/images/cardLevelImage27.png'
-  },
-  {
-    'levelClass': Level26(),
-    'image': 'assets/images/cardLevelImage26.png'
-  },
-  {
-    'levelClass': Level25(),
-    'image': 'assets/images/cardLevelImage25.png'
-  },
-  {
-    'levelClass': Level24(),
-    'image': 'assets/images/cardLevelImage24.png'
-  },
-  {
-    'levelClass': Level23(),
-    'image': 'assets/images/cardLevelImage23.png'
-  },
-  {
-    'levelClass': Level22(),
-    'image': 'assets/images/cardLevelImage22.png'
-  },
-  {
-    'levelClass': Level21(),
-    'image': 'assets/images/cardLevelImage21.png'
-  },
-  {
-    'levelClass': Level20(),
-    'image': 'assets/images/cardLevelImage20.png'
-  },
-  {
-    'levelClass': Level19(),
-    'image': 'assets/images/cardLevelImage19.png'
-  },
-  {
-    'levelClass': Level18(),
-    'image': 'assets/images/cardLevelImage18.png'
-  },
-  {
-    'levelClass': Level17(),
-    'image': 'assets/images/cardLevelImage17.png'
-  },
-  {
-    'levelClass': Level16(),
-    'image': 'assets/images/cardLevelImage16.png'
-  },
-  {
-    'levelClass': Level15(),
-    'image': 'assets/images/cardLevelImage15.png'
-  },
-  {
-    'levelClass': Level14(),
-    'image': 'assets/images/cardLevelImage14.png'
-  },
-  {
-    'levelClass': Level13(),
-    'image': 'assets/images/cardLevelImage13.png'
-  },
-  {
-    'levelClass': Level12(),
-    'image': 'assets/images/cardLevelImage12.png'
-  },
-  {
-    'levelClass': Level11(),
-    'image': 'assets/images/cardLevelImage11.png'
-  },
-  {
-    'levelClass': Level10(),
-    'image': 'assets/images/cardLevelImage10.png'
-  },
-  {
-    'levelClass': Level9(),
-    'image': 'assets/images/cardLevelImage9.png'
-  },
-  {
-    'levelClass': Level8(),
-    'image': 'assets/images/cardLevelImage8.png'
-  },
-  {
-    'levelClass': Level7(),
-    'image': 'assets/images/cardLevelImage7.png'
-  },
-  {
-    'levelClass': Level6(),
-    'image': 'assets/images/cardLevelImage6.png'
-  },
-  {
-    'levelClass': Level5(),
-    'image': 'assets/images/cardLevelImage5.png'
-  },
-  {
-    'levelClass': Level4(),
-    'image': 'assets/images/cardLevelImage4.png'
-  },
-  {
-    'levelClass': Level3(),
-    'image': 'assets/images/cardLevelImage3.png'
-  },
-  {
-    'levelClass': Level2(),
-    'image': 'assets/images/cardLevelImage2.png'
-  },
-  {
-    'levelClass': Level1(),
-    'image': 'assets/images/cardLevelImage1.png'
-  },
+  {'levelClass': LevelsPage(), 'image': 'assets/images/commingSoon.png'},
+  {'levelClass': Level30(), 'image': 'assets/images/cardLevelImage30.png'},
+  {'levelClass': Level29(), 'image': 'assets/images/cardLevelImage29.png'},
+  {'levelClass': Level28(), 'image': 'assets/images/cardLevelImage28.png'},
+  {'levelClass': Level27(), 'image': 'assets/images/cardLevelImage27.png'},
+  {'levelClass': Level26(), 'image': 'assets/images/cardLevelImage26.png'},
+  {'levelClass': Level25(), 'image': 'assets/images/cardLevelImage25.png'},
+  {'levelClass': Level24(), 'image': 'assets/images/cardLevelImage24.png'},
+  {'levelClass': Level23(), 'image': 'assets/images/cardLevelImage23.png'},
+  {'levelClass': Level22(), 'image': 'assets/images/cardLevelImage22.png'},
+  {'levelClass': Level21(), 'image': 'assets/images/cardLevelImage21.png'},
+  {'levelClass': Level20(), 'image': 'assets/images/cardLevelImage20.png'},
+  {'levelClass': Level19(), 'image': 'assets/images/cardLevelImage19.png'},
+  {'levelClass': Level18(), 'image': 'assets/images/cardLevelImage18.png'},
+  {'levelClass': Level17(), 'image': 'assets/images/cardLevelImage17.png'},
+  {'levelClass': Level16(), 'image': 'assets/images/cardLevelImage16.png'},
+  {'levelClass': Level15(), 'image': 'assets/images/cardLevelImage15.png'},
+  {'levelClass': Level14(), 'image': 'assets/images/cardLevelImage14.png'},
+  {'levelClass': Level13(), 'image': 'assets/images/cardLevelImage13.png'},
+  {'levelClass': Level12(), 'image': 'assets/images/cardLevelImage12.png'},
+  {'levelClass': Level11(), 'image': 'assets/images/cardLevelImage11.png'},
+  {'levelClass': Level10(), 'image': 'assets/images/cardLevelImage10.png'},
+  {'levelClass': Level9(), 'image': 'assets/images/cardLevelImage9.png'},
+  {'levelClass': Level8(), 'image': 'assets/images/cardLevelImage8.png'},
+  {'levelClass': Level7(), 'image': 'assets/images/cardLevelImage7.png'},
+  {'levelClass': Level6(), 'image': 'assets/images/cardLevelImage6.png'},
+  {'levelClass': Level5(), 'image': 'assets/images/cardLevelImage5.png'},
+  {'levelClass': Level4(), 'image': 'assets/images/cardLevelImage4.png'},
+  {'levelClass': Level3(), 'image': 'assets/images/cardLevelImage3.png'},
+  {'levelClass': Level2(), 'image': 'assets/images/cardLevelImage2.png'},
+  {'levelClass': Level1(), 'image': 'assets/images/cardLevelImage1.png'},
 ];
 
 class Tinder extends StatefulWidget {
@@ -308,7 +215,6 @@ class _TinderState extends State<Tinder> {
 }
 
 class Card extends StatelessWidget {
-
   final levelClass;
   final String levelImagePath;
 
@@ -317,96 +223,36 @@ class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Swipable(
-        child: Center(
-          child: Container(
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
-                  spreadRadius: 4,
-                  blurRadius: 15.0,
-                )
-              ],
-              borderRadius: BorderRadius.circular(
-                20.0,
-              ),),
-            child: Material(
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.05),
+                spreadRadius: 4,
+                blurRadius: 15.0,
+              )
+            ],
+            borderRadius: BorderRadius.circular(
+              20.0,
+            ),
+          ),
+          child: Material(
+            borderRadius: BorderRadius.circular(20),
+            child: InkWell(
               borderRadius: BorderRadius.circular(20),
-              child: InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => levelClass),
+              ),
+              child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => levelClass),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(levelImagePath.toString()),
-                ),
+                child: Image.asset(levelImagePath.toString()),
               ),
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }
-
-/*
-
-      child: Container(
-        decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                spreadRadius: 4,
-                blurRadius: 10,
-                offset: Offset(0, 3),
-              )
-            ],
-            borderRadius: BorderRadius.circular(
-              16.0,
-            ),
-            color: color),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            SizedBox(
-                width: 150,
-                height: 150,
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                    ),
-                    child: Text(
-                      levelName.toString(),
-                      style: TextStyle(fontSize: 20.0, color: colorLacivert),
-                    ),
-                ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  16.0,
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Material(
-                      child: InkWell(
-                        onTap: () => Navigator.push(context,
-                         MaterialPageRoute(builder: (context) => levelClass),
-                        ),
-                        child: Image.asset(levelImagePath.toString()),
-                      )
-                  ),
-                  Image.asset('assets/images/swipedImage.png'),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-
-
- */
